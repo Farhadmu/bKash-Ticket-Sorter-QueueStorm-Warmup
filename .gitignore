@@ -7,3 +7,4 @@ venv/
 *.log
 node_modules/
 problem.err
+.puku/
