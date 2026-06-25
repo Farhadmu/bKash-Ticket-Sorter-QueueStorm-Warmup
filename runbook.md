@@ -80,6 +80,12 @@ safety rule, schema validation, and phishing routing.
    - `LLM_BASE_URL` (optional)
    - `LLM_MODEL` (optional)
 6. Wait for the deploy to finish. Render provisions HTTPS automatically.
+
+> **Note:** `runtime.txt` pins Python to **3.12.7**. Render's default
+> (currently Python 3.14) does not yet have prebuilt wheels for our
+> pinned `pydantic-core`, which would force a Rust/maturin build and
+> fail on Render's read-only filesystem.
+
 7. Smoke-test:
 
 ```bash
